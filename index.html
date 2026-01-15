@@ -19,12 +19,21 @@ body {
   padding: 28px;
   border-radius: 14px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* ロゴ */
+.logo {
+  max-width: 220px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
 }
 
 h1 {
   font-size: 20px;
   margin-bottom: 14px;
-  text-align: center;   /* ← センター表示 */
+  text-align: center;
   line-height: 1.4;
 }
 
@@ -32,6 +41,7 @@ p {
   font-size: 14px;
   line-height: 1.7;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 button {
@@ -54,12 +64,17 @@ button:hover {
   margin-top: 16px;
   font-size: 12px;
   color: #666;
+  text-align: left;
 }
 </style>
 </head>
 
 <body>
 <div class="box">
+
+  <!-- ロゴ -->
+  <img src="logo.png" alt="ロゴマーク" class="logo">
+
   <h1>
     スマイルあんしんカメラ<br>
     新規登録
@@ -67,11 +82,11 @@ button:hover {
 
   <p>
     ※下のボタンを押すと、<br>　メールアプリが起動します。<br>
-   【注意!!】<br>
+    【注意!!】<br>
     ※必ずパーソナルIDで登録された<br>
-     ［メールアドレス］から送信してください。<br>
+    ［メールアドレス］から送信してください。<br>
     ※必ずパーソナルIDで登録された<br> 
-     ［電話番号］と同一の内容を入力してください。
+    ［電話番号］と同一の内容を入力してください。
   </p>
 
   <button onclick="openMail()">
