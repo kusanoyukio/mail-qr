@@ -22,27 +22,30 @@ body {
   text-align: center;
 }
 
-/* ロゴ */
+/* ロゴ（間隔を詰める） */
 .logo {
   width: 80px;
   height: auto;
-  margin-bottom: 12px;
+  margin-bottom: 4px;   /* ← ここを縮小 */
 }
 
+/* タイトル */
 h1 {
   font-size: 20px;
-  margin-bottom: 14px;
+  margin-top: 0;        /* ← ロゴとの隙間を消す */
+  margin-bottom: 12px;
   line-height: 1.4;
 }
 
-p {
+/* 【注意】タイトル */
+.attention-title {
   font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 14px;
+  font-weight: bold;
+  margin: 0 0 4px 0;
   text-align: left;
 }
 
-/* ・ 用リスト（頭出し） */
+/* ・用リスト（頭出し） */
 ul.notice {
   padding-left: 1.2em;
   margin: 0 0 10px 0;
@@ -54,13 +57,20 @@ ul.notice li {
   margin-bottom: 4px;
 }
 
-/* ※ 用（頭出し） */
+/* 「必ず」で始まる行：全文赤字 */
+.must-line {
+  color: #d60000;
+  font-weight: bold;
+}
+
+/* ※ 行（頭出し） */
 .note-text {
   font-size: 14px;
   line-height: 1.7;
   padding-left: 1.2em;
   text-indent: -1.2em;
   text-align: left;
+  margin-bottom: 16px;
 }
 
 button {
@@ -91,6 +101,7 @@ button:hover {
 <body>
 <div class="box">
 
+  <!-- ロゴ -->
   <img src="logo.png" alt="ロゴマーク" class="logo">
 
   <h1>
@@ -98,11 +109,15 @@ button:hover {
     新規登録
   </h1>
 
-  <p><strong>【注意!!】</strong></p>
+  <div class="attention-title">【注意】</div>
 
   <ul class="notice">
-    <li>必ずパーソナルIDで登録された［メールアドレス］から送信してください。</li>
-    <li>必ずパーソナルIDで登録された［電話番号］と同一の内容を入力してください。</li>
+    <li class="must-line">
+      必ずパーソナルIDで登録された［メールアドレス］から送信してください。
+    </li>
+    <li class="must-line">
+      必ずパーソナルIDで登録された［電話番号］と同一の内容を入力してください。
+    </li>
   </ul>
 
   <div class="note-text">
